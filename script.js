@@ -1,16 +1,23 @@
 
 const tg = window.Telegram.WebApp;
 
-
 tg.MainButton.setText("Отправить");
 tg.MainButton.show();
 
-
 tg.MainButton.onClick(() => {
-    tg.sendData("Данные отправлены!");
+    const message = document.getElementById('messageInput').value;
+    if (message) {
+        tg.sendData(message); 
+    } else {
+        tg.showAlert("Введите сообщение!"); 
+    }
 });
 
-
-document.getElementById('mainButton').addEventListener('click', () => {
-    tg.showAlert("Кнопка нажата!");
+document.getElementById('sendButton').addEventListener('click', () => {
+    const message = document.getElementById('messageInput').value;
+    if (message) {
+        tg.sendData(message); 
+    } else {
+        tg.showAlert("Введите сообщение!"); 
+    }
 });
