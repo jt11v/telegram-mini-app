@@ -77,3 +77,14 @@ h1 {
 #taskList li button:hover {
     background-color: #c82333;
 }
+
+#userInfo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#userName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
